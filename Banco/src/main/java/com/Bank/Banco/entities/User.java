@@ -1,21 +1,26 @@
-package com.Bank.Banco;
-
+package com.Bank.Banco.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_typeuser")
-public class AccesstotheBank {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;	
+@Table(name = "tb_user")
+public class User {
+	  @Id
+	  @GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
 private String Name;
 private String Password;
 
-public AccesstotheBank() {
+ @ManyToOne
+ @JoinColumn(name = "typeuser_id")
+public AccesstotheBank accesstothebank;
+
+public User() {
 }
 
 public Long getId() {
@@ -41,8 +46,15 @@ public String getPassword() {
 public void setPassword(String password) {
 	Password = password;
 }
-	
- 
+
+public AccesstotheBank getAccesstothebank() {
+	return accesstothebank;
+}
+
+public void setAccesstothebank(AccesstotheBank accesstothebank) {
+	this.accesstothebank = accesstothebank;
+}
+
 
 
 }

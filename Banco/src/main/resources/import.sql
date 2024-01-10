@@ -1,0 +1,1 @@
+INSERT INTO tb_user (name, password) VALUES ("Jefferson", "123456")
