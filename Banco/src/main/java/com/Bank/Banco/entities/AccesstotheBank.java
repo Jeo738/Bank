@@ -13,7 +13,7 @@ public class AccesstotheBank {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;	
 private String Name;
-private String Password;
+
 
 public AccesstotheBank() {
 }
@@ -34,13 +34,6 @@ public void setName(String name) {
 	Name = name;
 }
 
-public String getPassword() {
-	return Password;
-}
-
-public void setPassword(String password) {
-	Password = password;
-}
 	
  
 

@@ -20,6 +20,13 @@ private String Password;
  @JoinColumn(name = "typeuser_id")
 public AccesstotheBank accesstothebank;
 
+ public AccesstotheBank getAccesstothebank() {
+		return accesstothebank;
+	}
+
+	public void setAccesstothebank(AccesstotheBank accesstothebank) {
+		this.accesstothebank = accesstothebank;
+	}
 public User() {
 }
 
@@ -47,13 +54,7 @@ public void setPassword(String password) {
 	Password = password;
 }
 
-public AccesstotheBank getAccesstothebank() {
-	return accesstothebank;
-}
 
-public void setAccesstothebank(AccesstotheBank accesstothebank) {
-	this.accesstothebank = accesstothebank;
-}
 
 
 
